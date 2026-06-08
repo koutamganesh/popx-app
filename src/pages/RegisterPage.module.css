@@ -1,0 +1,150 @@
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-screen);
+  padding: 52px var(--screen-padding) 36px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: fadeUp 0.35s ease both;
+}
+
+
+.title {
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.25;
+  letter-spacing: -0.35px;
+  margin-bottom: 26px;
+  flex-shrink: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.agencyGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.agencyQuestion {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.radioRow {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide native radio */
+.radioInput {
+  display: none;
+}
+
+/* Custom radio circle */
+.radioCustom {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.18s ease;
+  position: relative;
+}
+
+.radioChecked {
+  border-color: var(--color-primary);
+}
+
+.radioChecked::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.radioText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-dark);
+}
+
+/* ── Footer ── */
+.footer {
+  padding-top: 28px;
+  flex-shrink: 0;
+}
+
+/* ── Submit button ── */
+.submitBtn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.18s ease, transform 0.14s ease;
+}
+
+.submitBtn.disabled {
+  background-color: var(--color-bg-disabled);
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.submitBtn.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.submitBtn.active:hover  { background-color: var(--color-primary-hover); }
+.submitBtn.active:active { transform: scale(0.975); }
+
+/* ── Spinner ── */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

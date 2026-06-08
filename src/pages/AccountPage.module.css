@@ -1,0 +1,133 @@
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-screen);
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp 0.35s ease both;
+}
+
+
+.topBar {
+  padding: 52px 24px 18px;
+}
+
+.topBarTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  letter-spacing: -0.1px;
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--color-divider);
+  margin: 0;
+}
+
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px 20px;
+}
+
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatarImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.cameraBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  border: 2.5px solid var(--color-bg-screen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+  padding: 0;
+}
+
+.cameraBtn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.fileInput {
+  display: none;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.profileName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.profileEmail {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-gray);
+}
+
+.bioSection {
+  padding: 20px 24px;
+}
+
+.bioText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-dark);
+  line-height: 1.7;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.logoutSection {
+  padding: 24px;
+}
+
+.logoutBtn {
+  width: 100%;
+  height: 50px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.logoutBtn:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.logoutBtn:active {
+  transform: scale(0.975);
+}

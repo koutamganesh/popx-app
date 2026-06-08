@@ -1,0 +1,64 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary:        #6c25be;
+  --color-primary-hover:  #5b1fa8;
+  --color-secondary:      #c9b8e8;
+  --color-secondary-hover:#b9a4d8;
+
+  /* Text */
+  --color-text-dark:      #1a1a1a;
+  --color-text-gray:      #6b6b6b;
+  --color-text-label:     #6c25be;
+  --color-text-error:     #e53935;
+  --color-text-placeholder: #b0b0b0;
+
+  /* Backgrounds */
+  --color-bg-screen:      #f7f8fa;
+  --color-bg-white:       #ffffff;
+  --color-bg-disabled:    #c5c5c5;
+
+  /* Borders */
+  --color-border:         #d9d9d9;
+  --color-divider:        #e0e0e0;
+
+  /* Typography */
+  --font-family:          'DM Sans', sans-serif;
+
+  /* Layout */
+  --screen-width:         390px;
+  --screen-height:        844px;
+  --screen-padding:       28px;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #d1d1d1;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scrollbar hidden for phone screen */
+.screen-scroll::-webkit-scrollbar {
+  display: none;
+}
+.screen-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

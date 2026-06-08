@@ -1,0 +1,87 @@
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-screen);
+  padding: 52px var(--screen-padding) 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  overflow-y: auto;
+  animation: fadeUp 0.35s ease both;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.25;
+  letter-spacing: -0.35px;
+}
+
+.subtitle {
+  font-size: 14.5px;
+  font-weight: 400;
+  color: var(--color-text-gray);
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loginBtn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.18s ease, transform 0.14s ease;
+}
+
+.loginBtn.disabled {
+  background-color: var(--color-bg-disabled);
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.loginBtn.active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.loginBtn.active:hover  { background-color: var(--color-primary-hover); }
+.loginBtn.active:active { transform: scale(0.975); }
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

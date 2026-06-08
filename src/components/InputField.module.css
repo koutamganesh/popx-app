@@ -1,0 +1,87 @@
+
+.group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  position: absolute;
+  top: -9px;
+  left: 14px;
+  padding: 0 4px;
+  background-color: var(--color-bg-screen);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--color-text-label);
+  z-index: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.hasError .label {
+  color: var(--color-text-error);
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-bg-white);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-dark);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+}
+
+.hasError .input {
+  border-color: var(--color-text-error);
+}
+
+.inputWrap:has(.eyeBtn) .input {
+  padding-right: 44px;
+}
+
+
+.eyeBtn {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-gray);
+  display: flex;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.eyeBtn:hover {
+  color: var(--color-text-dark);
+}
+
+
+.errorMsg {
+  margin-top: 5px;
+  padding-left: 2px;
+  font-size: 11px;
+  color: var(--color-text-error);
+}
